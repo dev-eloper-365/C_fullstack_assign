@@ -1,13 +1,17 @@
 #include<stdio.h>
 
 int main(){
-    int num=5149,rem[6],i,result,last;
+    int num=3244,rem,i,result,last,first;
     
     for(i=0;num!=0;i++){
-        rem[i] = num%10;
+        rem = num%10;
         num = num/10;
-        last = rem[i];
+        if(i==0)
+        {
+            first = rem;
+        }
+        last = rem;
     }
-    result = last+rem[0];
+    result = first + last;
     printf("%d",result);
 }
