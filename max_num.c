@@ -11,10 +11,10 @@ int main(){
 }
 
 int findlargest(int num){
-     
+    int rem=0,prev_num=0,big_num,largest=0;
+   
     while(num!=0)
     {
-        int rem=0,prev_num=0,big_num,largest=0;
 
         rem = num % 10;
         if(prev_num>rem)
@@ -27,10 +27,10 @@ int findlargest(int num){
         
         if(big_num>=largest){
             largest = big_num; 
-            
         }
         prev_num=rem;
         num = num /10;
     }
     return largest;
+    // printf("%d",largest);
 }
